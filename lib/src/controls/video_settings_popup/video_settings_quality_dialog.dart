@@ -1,5 +1,6 @@
 import 'package:appinio_video_player/src/controls/video_settings_popup/video_settings_dialog_item.dart';
 import 'package:appinio_video_player/src/custom_video_player_controller.dart';
+import 'package:cached_video_player_plus/cached_video_player_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:appinio_video_player/appinio_video_player.dart';
 
@@ -60,7 +61,8 @@ class _VideoSettingsQualityDialogState
                 padding: const EdgeInsets.all(0),
                 shrinkWrap: true,
                 children: [
-                  for (MapEntry<String, CachedVideoPlayerController> videoSource
+                  for (MapEntry<String,
+                          CachedVideoPlayerPlusController> videoSource
                       in widget.customVideoPlayerController
                           .additionalVideoSources!.entries)
                     VideoSettingsDialogItem(
